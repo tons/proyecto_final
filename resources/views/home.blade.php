@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('slider')
+    <p>SLIDER</p>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -20,4 +24,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+    <p>foter</p>
 @endsection

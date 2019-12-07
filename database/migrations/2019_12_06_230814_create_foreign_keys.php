@@ -17,11 +17,11 @@ class CreateForeignKeys extends Migration {
 						->onDelete('cascade')
 						->onUpdate('cascade');
 		});
-		/*Schema::table('orders', function(Blueprint $table) {
+		Schema::table('orders', function(Blueprint $table) {
 			$table->foreign('user_id')->references('id')->on('users')
 						->onDelete('cascade')
 						->onUpdate('cascade');
-		});*/
+		});
 		Schema::table('orders', function(Blueprint $table) {
 			$table->foreign('shipping_id')->references('id')->on('shipping')
 						->onDelete('cascade')

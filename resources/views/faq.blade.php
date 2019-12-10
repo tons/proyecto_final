@@ -2,6 +2,10 @@
 <html>
   <head>
       <?php require_once("inc/head.php") ?>
+
+      @extends('appbase')
+
+      @section('content')
   </head>
   <body>
     <div id="all">

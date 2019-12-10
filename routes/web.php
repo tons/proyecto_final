@@ -11,10 +11,29 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {
+    return view('home');
+});*/
+
+Route::view('/', 'welcome');
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')
+    ->name('home');
+
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
+
+/*
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('brandmodel', 'BrandModelController');
+Route::resource('productmodel', 'ProductModelController');
+Route::resource('customermodel', 'CustomerModelController');
+Route::resource('shippingmodel', 'ShippingModelController');
+Route::resource('ordermodel', 'OrderModelController');
+Route::resource('paymentmodel', 'PaymentModelController');
+Route::resource('orderdetailsmodel', 'OrderDetailsModelController');
+Route::resource('categorymodel', 'CategoryModelController');*/

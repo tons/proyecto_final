@@ -15,7 +15,7 @@
     return view('home');
 });*/
 
-Route::view('/', 'welcome');
+Route::view('/', 'home');
 
 Auth::routes();
 
@@ -25,6 +25,10 @@ Route::get('/home', 'HomeController@index')
 Route::get('/admin', 'AdminController@admin')
     ->middleware('is_admin')
     ->name('admin');
+
+Route::get('/cms', function () {
+    return view('cms.auth.login');
+});
 
 // Listado
 Route::get('crud/products', 'ProductCrudController@list')->name('crud.products');
@@ -43,7 +47,6 @@ Route::get('/checkout', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('brandmodel', 'BrandModelController');
-
 Route::resource('customermodel', 'CustomerModelController');
 Route::resource('shippingmodel', 'ShippingModelController');
 Route::resource('ordermodel', 'OrderModelController');

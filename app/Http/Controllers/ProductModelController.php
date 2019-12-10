@@ -7,6 +7,40 @@ use Illuminate\Http\Request;
 class ProductModelController extends Controller 
 {
 
+   // Mostrar vistas
+   public function createOrEdit($id = null)
+   {
+       $data = [];
+       // Si el controlador no recibe un ID, es creación
+       if (!$id) {
+           $data['title'] = 'Crear';
+           return view('crud.categories.form', $data);
+       }
+       $data['title'] = 'Editar';
+       $data['category'] = Category::find($id);
+       return view('crud.categories.form', $data);
+   }
+ 
+   // Almacenar
+   public function storeOrUpdate($id = null, Request $request)
+   {
+       // First or new nos devuelve un registro existente para editar o una instancia nueva para crear
+       $category = Category::firstOrNew(['id' => $id]);
+       $category->fill($request->all());
+       $category->save();
+       return redirect(route('crud.categories.list'));
+   }
+
+
+  
+
+
+
+
+
+
+
+
   /**
    * Display a listing of the resource.
    *
@@ -77,6 +111,7 @@ class ProductModelController extends Controller
    * @return Response
    */
   public function destroy($id)
+  
   {
     
   }

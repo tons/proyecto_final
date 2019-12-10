@@ -8,7 +8,7 @@ class CreatePaymentsTable extends Migration {
 	public function up()
 	{
 		Schema::create('payments', function(Blueprint $table) {
-			$table->increments('id')->primary();
+			$table->increments('id');
 			$table->string('method', 255);
 			$table->enum('status', array('Pending', 'Completed'));
 			$table->string('date', 255);

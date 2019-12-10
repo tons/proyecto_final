@@ -1,0 +1,3 @@
+@extends('appbase')
+
+@section('content')

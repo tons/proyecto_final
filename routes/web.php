@@ -34,7 +34,10 @@ Route::get('crud/products/create_update/{id?}', 'ProductCrudController@createOrE
 Route::post('crud/products/create_update/{id?}', 'ProductCrudController@storeOrUpdate')->name('crud.products.createOrUpdate');
 // Eliminación
 Route::delete('crud/products/delete/{id}', 'ProductCrudController@delete')->name('crud.products.delete');
- 
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
 
 /*
 Route::get('/home', 'HomeController@index')->name('home');
@@ -46,4 +49,5 @@ Route::resource('shippingmodel', 'ShippingModelController');
 Route::resource('ordermodel', 'OrderModelController');
 Route::resource('paymentmodel', 'PaymentModelController');
 Route::resource('orderdetailsmodel', 'OrderDetailsModelController');
-Route::resource('categorymodel', 'CategoryModelController');*/
+Route::resource('categorymodel', 'CategoryModelController');
+*/

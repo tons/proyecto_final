@@ -31,7 +31,7 @@ Route::get('/cms', function () {
 });
 
 // Listado
-Route::get('crud/products', 'ProductCrudController@list')->name('crud.products');
+Route::get('/cms/products', 'ProductModelController@directory')->name('cmsProducts');
 // Mostrar formulario de Creación / Edición
 Route::get('crud/products/create_update/{id?}', 'ProductCrudController@createOrEdit')->name('crud.products.createOrUpdate');
 // Obtener datos enviados y Crear/Guardar
@@ -53,4 +53,10 @@ Route::resource('ordermodel', 'OrderModelController');
 Route::resource('paymentmodel', 'PaymentModelController');
 Route::resource('orderdetailsmodel', 'OrderDetailsModelController');
 Route::resource('categorymodel', 'CategoryModelController');
+*/
+
+/*
+Route::get('search/{tipo}/{id}', 'ClasificationController@getClasification')->name("obtener");
+buscarporclasificacion/category/1
+buscarporclasificacion/tag/1
 */

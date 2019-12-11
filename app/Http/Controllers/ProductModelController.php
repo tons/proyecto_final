@@ -1,11 +1,18 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
+use App\ProductModel;
 use Illuminate\Http\Request;
 
-class ProductModelController extends Controller 
+class ProductModelController extends Controller
 {
+
+    public function directory() {
+        $list = ProductModel::orderby('id')->get();
+        dd($list);
+        return view('cms.products', compact('list'));
+    }
 
    // Mostrar vistas
    public function createOrEdit($id = null)
@@ -20,7 +27,7 @@ class ProductModelController extends Controller
        $data['category'] = Category::find($id);
        return view('crud.categories.form', $data);
    }
- 
+
    // Almacenar
    public function storeOrUpdate($id = null, Request $request)
    {
@@ -32,8 +39,13 @@ class ProductModelController extends Controller
    }
 
 
-  
 
+public function obtenerDesdeClasificacion($tipoEtiqueta) {
+    if($tipoEtiqueta == 'category') {
+        $data['isCategpry'] = true;
+        $data['list'] = ProductModel::all();
+    }
+}
 
 
 
@@ -48,7 +60,7 @@ class ProductModelController extends Controller
    */
   public function index()
   {
-    
+
   }
 
   /**
@@ -58,7 +70,7 @@ class ProductModelController extends Controller
    */
   public function create()
   {
-    
+
   }
 
   /**
@@ -68,7 +80,7 @@ class ProductModelController extends Controller
    */
   public function store(Request $request)
   {
-    
+
   }
 
   /**
@@ -79,7 +91,7 @@ class ProductModelController extends Controller
    */
   public function show($id)
   {
-    
+
   }
 
   /**
@@ -90,7 +102,7 @@ class ProductModelController extends Controller
    */
   public function edit($id)
   {
-    
+
   }
 
   /**
@@ -101,7 +113,7 @@ class ProductModelController extends Controller
    */
   public function update($id)
   {
-    
+
   }
 
   /**
@@ -111,11 +123,11 @@ class ProductModelController extends Controller
    * @return Response
    */
   public function destroy($id)
-  
+
   {
-    
+
   }
-  
+
 }
 
 ?>

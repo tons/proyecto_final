@@ -31,13 +31,13 @@ Route::get('/cms', function () {
 });
 
 // Listado
-Route::get('/cms/products', 'ProductModelController@directory')->name('cmsProducts');
+Route::get('/cms/products', 'ProductModelController@list')->name('cmsProductos');
 // Mostrar formulario de Creación / Edición
-Route::get('crud/products/create_update/{id?}', 'ProductCrudController@createOrEdit')->name('crud.products.createOrUpdate');
+Route::get('/cms/products/create_update/{id?}', 'ProductModelController@createOrEdit')->name('cms.products.createOrUpdate');
 // Obtener datos enviados y Crear/Guardar
-Route::post('crud/products/create_update/{id?}', 'ProductCrudController@storeOrUpdate')->name('crud.products.createOrUpdate');
+Route::post('/cms/products/create_update/{id?}', 'ProductModelController@storeOrUpdate')->name('cms.products.createOrUpdate');
 // Eliminación
-Route::delete('crud/products/delete/{id}', 'ProductCrudController@delete')->name('crud.products.delete');
+Route::delete('/cms/products/delete/{id}', 'ProductModelController@delete')->name('cms.products.delete');
 
 Route::get('/checkout', function () {
     return view('checkout');

@@ -1,35 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.appbase')
 
-@section('topheader')
+{{--@section('content')
 
-@endsection
+    @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+    @endif
+
+@endsection--}}
 
 @section('content')
-    {{--    <div class="container">--}}
-    {{--        <div class="row justify-content-center">--}}
-    {{--            <div class="col-md-8">--}}
-    {{--                <div class="card">--}}
-    {{--                    <div class="card-header">Dashboard</div>--}}
-
-    {{--                    <div class="card-body">--}}
-    {{--                        @if (session('status'))--}}
-    {{--                            <div class="alert alert-success" role="alert">--}}
-    {{--                                {{ session('status') }}--}}
-    {{--                            </div>--}}
-    {{--                        @endif--}}
-
-    {{--                        Ya estás logueado!--}}
-    {{--                    </div>--}}
-    {{--                </div>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
-@endsection
-
-
 <div id="all">
-
-    <?php require_once("inc/topheader.php"); ?>
 
     <section style="background: url('img/photogrid.jpg') center center repeat; background-size: cover;"
              class="bar background-white relative-positioned">
@@ -426,5 +408,7 @@
             </ul>
         </div>
     </section>
+
+</div>
 
 @endsection

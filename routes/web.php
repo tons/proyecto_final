@@ -43,6 +43,10 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
+Route::get('/ship', function () {
+    return view('shipping');
+});
+
 /*
 Route::get('/home', 'HomeController@index')->name('home');
 

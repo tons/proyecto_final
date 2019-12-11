@@ -119,17 +119,6 @@
                                                 name</a></h3>
                                         <p class="price">$143.00</p>
                                     </div>
-                                    <div class="text">
-                                        <h3 class="h5"><a href="shop-detail.html">White Blouse Armani</a></h3>
-                                        <p class="price">
-                                            <del>$280</del>
-                                            $143.00
-                                        </p>
-                                    </div>
-                                    <div class="ribbon-holder">
-                                        <div class="ribbon sale">SALE</div>
-                                        <div class="ribbon new">NEW</div>
-                                    </div>
                                 </div>
                             </div>
 

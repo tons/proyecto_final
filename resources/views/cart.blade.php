@@ -1,10 +1,10 @@
-@extends('appbase')
+@extends('layouts.appbase')
 @section('content')
   <div id="content">
         <div class="container">
           <div class="row bar">
             <div class="col-lg-12">
-              <p class="text-muted lead">You currently have 3 item(s) in your cart.</p>
+              <p class="text-muted lead"></p>
             </div>
             <div id="basket" class="col-lg-9">
               <div class="box mt-0 pb-0 no-horizontal-padding">
@@ -21,28 +21,22 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td><a href="#"><img src="img/detailsquare.jpg" alt="White Blouse Armani" class="img-fluid"></a></td>
-                          <td><a href="#">White Blouse Armani</a></td>
-                          <td>
-                            <input type="number" value="2" class="form-control">
-                          </td>
-                          <td>$123.00</td>
-                          <td>$0.00</td>
-                          <td>$246.00</td>
-                          <td><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                        </tr>
-                        <tr>
-                          <td><a href="#"><img src="img/basketsquare.jpg" alt="Black Blouse Armani" class="img-fluid"></a></td>
-                          <td><a href="#">Black Blouse Armani</a></td>
-                          <td>
-                            <input type="number" value="1" class="form-control">
-                          </td>
-                          <td>$200.00</td>
-                          <td>$0.00</td>
-                          <td>$200.00</td>
-                          <td><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                        </tr>
+
+
+                            @foreach ($cart as $item)
+                            <tr>
+                                    <td><a href="#"><img src="img/detailsquare.jpg" alt="White Blouse Armani" class="img-fluid"></a></td>
+                                    <td><a href="#">White Blouse Armani</a></td>
+                                    <td>
+                                      <input type="number" value="" class="form-control">
+                                    </td>
+                                    <td>$123.00</td>
+                                    <td>$0.00</td>
+                                    <td>$246.00</td>
+                                    <td><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                  </tr>
+
+                            @endforeach
                       </tbody>
                       <tfoot>
                         <tr>

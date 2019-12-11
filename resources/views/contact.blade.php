@@ -1,18 +1,18 @@
+
+@extends('layouts.appbase')
+
 <!DOCTYPE html>
 <html>
   <head>
-      <?php require_once("inc/head.php") ?>
+      {{--<?php require_once("inc/head.php") ?>--}}
 
-      @extends('appbase')
-
-      @section('content')
+      @section('topheader')
+      @endsection
   </head>
   <body>
     <div id="all">
 
-      <?php require_once("inc/topheader.php"); ?>
-
-      <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
+            <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
         <div class="container">
           <div class="row d-flex align-items-center flex-wrap">
             <div class="col-md-7">
@@ -20,13 +20,8 @@
             </div>
             <div class="col-md-5">
               <ul class="breadcrumb d-flex justify-content-end">
-<<<<<<< HEAD:-back-template/contact.html
-                <li class="breadcrumb-item"><a href="index-back.html">Home</a></li>
-                <li class="breadcrumb-item active">Contacto</li>
-=======
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item active">Contacto</li>
->>>>>>> master:contact.html
               </ul>
             </div>
           </div>
@@ -127,23 +122,9 @@
         <div id="map"></div>
       </div>
 
-      <?php require_once("inc/banner-footer.php") ?>
+
     </div>
-    <!-- Javascript files-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/popper.js/umd/popper.min.js"> </script>
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../vendor/jquery.cookie/jquery.cookie.js"> </script>
-    <script src="../vendor/waypoints/lib/jquery.waypoints.min.js"> </script>
-    <script src="../vendor/jquery.counterup/jquery.counterup.min.js"> </script>
-    <script src="../vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="../vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
-    <script src="../js/jquery.parallax-1.1.3.js"></script>
-    <script src="../vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="../vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-    <script src="../js/gmaps.js"></script>
-    <script src="../js/gmaps.init.js"></script>
-    <script src="../js/front.js"></script>
+    @section('footer')
+    @endsection
   </body>
 </html>

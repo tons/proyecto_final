@@ -1,4 +1,5 @@
-
+@extends('layouts.appbase')
+@section('content')
 <!DOCTYPE html>
 <html>
   <head>
@@ -39,7 +40,7 @@
 
     @extends('appbase')
 
-    @section('content')    
+    @section('content')
   </head>
   <body>
     <div id="all">
@@ -623,3 +624,4 @@
     <script src="js/front.js"></script>
   </body>
 </html>
+@endsection

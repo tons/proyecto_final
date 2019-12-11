@@ -1,11 +1,11 @@
+@extends('appbase')
 <!DOCTYPE html>
 <html>
   <head>
-      <?php require_once("inc/head.php") ?>
+      {{--<?php require_once("inc/head.php") ?>--}}
 
-      @extends('appbase')
-
-      @section('content')
+     @section('topheader')
+     @endsection
   </head>
   <body>
     <div id="all">
@@ -88,8 +88,9 @@
             </div>
         </div>
 
-        <?php require_once("inc/banner-footer.php") ?>
-        <?php require_once("inc/footer.php") ?>
-
+        {{--<?php require_once("inc/banner-footer.php") ?>
+        <?php require_once("inc/footer.php") ?>--}}
+@section('footer')
+@endsection
   </body>
 </html>

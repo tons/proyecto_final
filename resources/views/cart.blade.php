@@ -1,4 +1,5 @@
 @extends('layouts.appbase')
+
 @section('content')
   <div id="content">
         <div class="container">

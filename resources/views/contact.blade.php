@@ -1,15 +1,7 @@
-
 @extends('layouts.appbase')
 
-<!DOCTYPE html>
-<html>
-  <head>
-      {{--<?php require_once("inc/head.php") ?>--}}
+@section('content')
 
-      @section('topheader')
-      @endsection
-  </head>
-  <body>
     <div id="all">
 
             <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
@@ -124,7 +116,5 @@
 
 
     </div>
-    @section('footer')
     @endsection
-  </body>
-</html>
+

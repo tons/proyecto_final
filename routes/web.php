@@ -48,7 +48,21 @@ Route::get('/ship', function () {
     return view('shipping');
 });
 
+Route::get('/cart', function () {
+    return view('cart');
+});
 
+Route::get('/category', function () {
+    return view('category');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
+});
 //Crud marcas
 // Listado
 Route::get('/cms/brands', 'BrandModelController@list')->name('cmsBrands');
@@ -63,7 +77,9 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
-
+Route::get('/payment', function () {
+    return view('payment');
+});
 
 
 /*

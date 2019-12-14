@@ -1,20 +1,8 @@
-@extends('appbase')
-<!DOCTYPE html>
-<html>
-  <head>
-      {{--<?php require_once("inc/head.php") ?>--}}
+@extends('layouts.appbase')
 
-     @section('topheader')
-     @endsection
-  </head>
-  <body>
-    <div id="all">
+@section('content')
 
-        <?php require_once("inc/topheader.php"); ?>
-
-        <?php require_once("inc/breadcrums.php") ?>
-
-        <div id="content">
+           <div id="content">
             <div class="container">
                 <div class="row bar">
                     <div class="col-md-9">
@@ -87,10 +75,5 @@
                 </div>
             </div>
         </div>
-
-        {{--<?php require_once("inc/banner-footer.php") ?>
-        <?php require_once("inc/footer.php") ?>--}}
-@section('footer')
-@endsection
-  </body>
-</html>
+    </div>
+    @endsection

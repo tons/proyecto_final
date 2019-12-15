@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+
 
 class User extends Authenticatable
 {
@@ -43,4 +45,20 @@ class User extends Authenticatable
     public function isAdmin()    {
         return $this->type === self::ADMIN_TYPE;
     }
+}
+
+
+class UserModel extends Model 
+{
+
+    protected $table = 'users';
+    public $timestamps = true;
+    protected $fillable = ['name', 'last_name', 'email', 'password'];
+    protected $visible = ['name', 'last_name', 'email', 'password'];
+
+    public function orders()
+    {
+        return $this->hasMany('OrderModel');
+    }
+
 }

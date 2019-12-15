@@ -78,16 +78,17 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
-/*
+
+
 //Crud usuarios
 // Listado
-Route::get('/cms/users', 'CustomerModelController@list')->name('cmsUsuarios');
+Route::get('/cms/users', 'UserModelController@list')->name('cmsUsuarios');
 // Mostrar formulario de Creación / Edición
-Route::get('/cms/users/create_update/{id?}', 'CustomerModelController@createOrEdit')->name('cms.users.createOrUpdate');
+Route::get('/cms/users/create_update/{id?}', 'UserModelController@createOrEdit')->name('cms.users.createOrUpdate');
 // Obtener datos enviados y Crear/Guardar
-Route::post('/cms/users/create_update/{id?}', 'CustomerModelController@storeOrUpdate')->name('cms.users.createOrUpdate');
+Route::post('/cms/users/create_update/{id?}', 'UserModelController@storeOrUpdate')->name('cms.users.createOrUpdate');
 // Eliminación
-Route::delete('/cms/users/delete/{id}', 'CustomerModelController@delete')->name('cms.users.delete');
+Route::delete('/cms/users/delete/{id}', 'UserModelController@delete')->name('cms.users.delete');
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -112,4 +113,3 @@ Route::get('search/{tipo}/{id}', 'ClasificationController@getClasification')->na
 buscarporclasificacion/category/1
 buscarporclasificacion/tag/1
 */
-?>

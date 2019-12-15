@@ -1,8 +1,9 @@
 @extends('layouts.appbase')
+@section('content')
 
 @include('layouts.breadcrumbs')
 
-@section('content')
+
 
   <div id="content">
     <div class="container">
@@ -20,8 +21,8 @@
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="box shipping-method">
-                      <h4>USPS Next Day</h4>
-                      <p>Get it right on next day - fastest option possible.</p>
+                      <h4>Correo Argentino</h4>
+                      <p>Recibí tu producto en la puerta de tu casa en tan solo 5 días hábiles.</p>
                       <div class="box-footer text-center">
                         <input type="radio" name="delivery" value="delivery1">
                       </div>
@@ -29,8 +30,8 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="box shipping-method">
-                      <h4>USPS Next Day</h4>
-                      <p>Get it right on next day - fastest option possible.</p>
+                      <h4>Andreani</h4>
+                      <p>Busca tu producto en la sucursal más cercana en 2 días hábiles.</p>
                       <div class="box-footer text-center">
                         <input type="radio" name="delivery" value="delivery2">
                       </div>
@@ -38,8 +39,8 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="box shipping-method">
-                      <h4>USPS Next Day</h4>
-                      <p>Get it right on next day - fastest option possible.</p>
+                      <h4>DHL</h4>
+                      <p>Envíos internacionales en 10 días hábiles en la puerta de tu casa.</p>
                       <div class="box-footer text-center">
                         <input type="radio" name="delivery" value="delivery3">
                       </div>
@@ -59,22 +60,22 @@
         <div class="col-lg-3">
           <div id="order-summary" class="box mb-4 p-0">
             <div class="box-header mt-0">
-              <h3>Order summary</h3>
+              <h3>Resumen de la Orden</h3>
             </div>
-            <p class="text-muted text-small">Shipping and additional costs are calculated based on the values you have entered.</p>
+            <p class="text-muted text-small">El envío y los costos adicionales se calculan en base a los artículos seleccionados.</p>
             <div class="table-responsive">
               <table class="table">
                 <tbody>
                   <tr>
-                    <td>Order subtotal</td>
+                    <td>Subtotal</td>
                     <th>$446.00</th>
                   </tr>
                   <tr>
-                    <td>Shipping and handling</td>
+                    <td>Costo de envío</td>
                     <th>$10.00</th>
                   </tr>
                   <tr>
-                    <td>Tax</td>
+                    <td>Impuestos</td>
                     <th>$0.00</th>
                   </tr>
                   <tr class="total">
@@ -90,7 +91,8 @@
     </div>
   </div>
 
-@endsection
+
 
 @include('layouts.calltoaction')
+@endsection
 

@@ -30,6 +30,8 @@ Route::get('/cms', function () {
     return view('cms.auth.login');
 });
 
+
+
 // Listado
 Route::get('/cms/products', 'ProductModelController@list')->name('cmsProductos');
 // Mostrar formulario de Creación / Edición
@@ -45,6 +47,14 @@ Route::get('/checkout', function () {
 
 Route::get('/shipping', function () {
     return view('shipping');
+});
+
+Route::get('/product', function (){
+    return view('/product');
+});
+
+Route::get('/shopdetail', function (){
+    return view('/shopdetail');
 });
 
 /*

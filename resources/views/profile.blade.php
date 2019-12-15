@@ -1,3 +1,6 @@
+@extends('layouts.appbase')
+@section('content')
+
 <?php
 session_start();
 if(!isset($_SESSION["usuario"])){

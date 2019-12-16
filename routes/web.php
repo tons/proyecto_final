@@ -57,6 +57,14 @@ Route::get('/shopdetail', function (){
     return view('/shopdetail');
 });
 
+Route::get('/profile', function (){
+    return view('/profile');
+});
+
+Route::get('/auth/register', function (){
+    return ('/register');
+});
+
 /*
 Route::get('/home', 'HomeController@index')->name('home');
 

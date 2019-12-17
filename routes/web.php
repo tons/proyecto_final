@@ -30,8 +30,7 @@ Route::get('/cms', function () {
     return view('cms.auth.login');
 });
 
-
-
+//Crud productos
 // Listado
 Route::get('/cms/products', 'ProductModelController@list')->name('cmsProductos');
 // Mostrar formulario de Creación / Edición
@@ -49,6 +48,24 @@ Route::get('/shipping', function () {
     return view('shipping');
 });
 
+
+//Crud marcas
+// Listado
+Route::get('/cms/brands', 'BrandModelController@list')->name('cmsBrands');
+// Mostrar formulario de Creación / Edición
+Route::get('/cms/brands/create_update/{id?}', 'BrandModelController@createOrEdit')->name('cms.brands.createOrUpdate');
+// Obtener datos enviados y Crear/Guardar
+Route::post('/cms/brands/create_update/{id?}', 'BrandModelController@storeOrUpdate')->name('cms.brands.createOrUpdate');
+// Eliminación
+Route::delete('/cms/brands/delete/{id}', 'BrandModelController@delete')->name('cms.brands.delete');
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+
+
+
+
 Route::get('/product', function (){
     return view('/product');
 });
@@ -65,7 +82,7 @@ Route::get('/profile', function (){
 /*
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('brandmodel', 'BrandModelController');
+
 Route::resource('customermodel', 'CustomerModelController');
 Route::resource('shippingmodel', 'ShippingModelController');
 Route::resource('ordermodel', 'OrderModelController');

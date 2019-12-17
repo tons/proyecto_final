@@ -422,21 +422,21 @@
                         <h4 class="h6">Novedades Moda</h4>
                         <ul class="list-unstyled footer-blog-list">
                             <li class="d-flex align-items-center">
-                                <div class="image"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></div>
+                                
                                 <div class="text">
                                     <h5 class="mb-0"> <a href="post.html">Nuestras Noticias</a></h5>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
-                                <div class="image"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></div>
+                                
                                 <div class="text">
-                                    <h5 class="mb-0"> <a href="post.html">Blog post name</a></h5>
+                                    <h5 class="mb-0"> <a href="post.html">Trabajá con nosotros</a></h5>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
-                                <div class="image"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></div>
+                                
                                 <div class="text">
-                                    <h5 class="mb-0"> <a href="post.html">Very very long blog post name</a></h5>
+                                    <h5 class="mb-0"> <a href="post.html">Responsabilidad social</a></h5>
                                 </div>
                             </li>
                         </ul>
@@ -445,33 +445,24 @@
                     <div class="col-lg-3">
                         <h4 class="h6">Contacto</h4>
                         <p class="text-uppercase">
-                            <strong>Viste.me Ltd.</strong><br>13/25 New Avenue
-                            <br>Newtown upon River <br>45Y 73J <br>Córdoba <br>
+                            <strong>Viste.me</strong><br>José Biagorri 673
+                            <br>Alta Córdoba <br>5000<br>Córdoba <br>
                             <strong>Argentina</strong>
                         </p>
                         <a href="contacto.php" class="btn btn-template-main">Contáctenos</a>
                         <hr class="d-block d-lg-none">
                     </div>
-                    <div class="col-lg-3">
-                        <ul class="list-inline photo-stream">
-                            <li class="list-inline-item"><a href="#"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="img/detailsquare2.jpg" alt="..." class="img-fluid"></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="img/detailsquare3.jpg" alt="..." class="img-fluid"></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="img/detailsquare3.jpg" alt="..." class="img-fluid"></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="img/detailsquare2.jpg" alt="..." class="img-fluid"></a></li>
-                            <li class="list-inline-item"><a href="#"><img src="img/detailsquare.jpg" alt="..." class="img-fluid"></a></li>
-                        </ul>
-                    </div>
+                  
                 </div>
             </div>
             <div class="copyrights">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 text-center-md">
-                            <p>&copy; 2019. Viste.me - Indumentaria finísima..</p>
+                            <p>&copy; 2019. Viste.me - Indumentaria para mujeres y hombres a la moda!</p>
                         </div>
                         <div class="col-lg-8 text-right text-center-md">
-                            <p>Equipo Proyecto Integrador Uno</p>
+                            <p>Equipo Proyecto Integrador 1</p>
                             <!-- Please do not remove the backlink to us unless you purchase the Attribution-free License at https://bootstrapious.com/donate. Thank you. -->
                         </div>
                     </div>

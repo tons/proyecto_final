@@ -44,7 +44,7 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
-Route::get('/ship', function () {
+Route::get('/shipping', function () {
     return view('shipping');
 });
 
@@ -64,6 +64,19 @@ Route::get('/checkout', function () {
 });
 
 
+
+
+Route::get('/product', function (){
+    return view('/product');
+});
+
+Route::get('/shopdetail', function (){
+    return view('/shopdetail');
+});
+
+Route::get('/profile', function (){
+    return view('/profile');
+});
 
 
 /*

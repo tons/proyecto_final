@@ -48,9 +48,13 @@ Route::get('/shipping', function () {
     return view('shipping');
 });
 
+Route::get('/orderrev', function () {
+    return view('orderreview');
+});
 Route::get('/cart', function () {
     return view('cart');
 });
+
 
 Route::get('/category', function () {
     return view('category');
@@ -73,9 +77,6 @@ Route::post('/cms/brands/create_update/{id?}', 'BrandModelController@storeOrUpda
 // Eliminación
 Route::delete('/cms/brands/delete/{id}', 'BrandModelController@delete')->name('cms.brands.delete');
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
 
 Route::get('/payment', function () {
     return view('payment');
@@ -91,9 +92,6 @@ Route::post('/cms/categories/create_update/{id?}', 'CategoryModelController@stor
 // Eliminación
 Route::delete('/cms/categories/delete/{id}', 'CategoryModelController@delete')->name('cms.categories.delete');
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
 
 
 
@@ -107,9 +105,6 @@ Route::post('/cms/users/create_update/{id?}', 'UserModelController@storeOrUpdate
 // Eliminación
 Route::delete('/cms/users/delete/{id}', 'UserModelController@delete')->name('cms.users.delete');
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
 
 
 

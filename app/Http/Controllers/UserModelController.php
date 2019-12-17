@@ -8,11 +8,16 @@ use Illuminate\Http\Request;
 class UserModelController extends Controller 
 {
   // Listar usuarios
-      public function list() {
-      $list = User::orderby('id')->get();
-      dd($list);
-      return view('cms.users', compact('list'));
-  }
+    public function list() {
+        $list = User::orderby('id')->get();
+        return view('cms.users', compact('list'));
+    }
+
+    public function profile($id) {
+        $item = [];
+        $item ['profile'] = User::find($id);
+        return view('profile', $item);
+    }
 
  // Mostrar vistas
  public function createOrEdit($id = null)

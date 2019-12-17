@@ -122,9 +122,8 @@ Route::get('/shopdetail', function (){
     return view('/shopdetail');
 });
 
-Route::get('/profile', function (){
-    return view('/profile');
-});
+Route::get('/profile/{id?}', 'UserModelController@profile')->name('UserProfile');
+Route::post('/profile/{id?}', 'UserModelController@useredit')->name('UserProfile');
 
 
 /*

@@ -1,30 +1,6 @@
 @extends('layouts.appbase')
 @section('content')
 
-<?php
-session_start();
-if(!isset($_SESSION["usuario"])){
-	header("location: registro.php");
-} else {
-    $usuario = [
-        "nombre" => (($_SESSION["usuario"]["nombre"]) ?  : ""),
-        "apellido" => (($_SESSION["usuario"]["apellido"]) ?  : ""),
-        "image" => (($_SESSION["usuario"]["image"]) ?  : "")
-    ];
-}
-?>
-<!DOCTYPE html>
-<html>
-  <head>
-      <?php require_once("inc/head.php") ?>
-  </head>
-  <body>
-    <div id="all">
-
-        <?php require_once("inc/topheader.php"); ?>
-
-        <?php require_once("inc/breadcrums.php") ?>
-
       <div id="content">
         <div class="container">
           <div class="row bar">
@@ -72,65 +48,55 @@ if(!isset($_SESSION["usuario"])){
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="firstname">Nombre</label>
-                        <input id="firstname" type="text" class="form-control" value="<?= $_SESSION["usuario"]["nombre"]?>">
+                        <input name="name" type="text" class="form-control" value="{{ $profile->name }}">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="lastname">Apellido</label>
-                        <input id="lastname" type="text" class="form-control" value="<?= $_SESSION["usuario"]["apellido"]?>">
+                        <input name="last_name" type="text" class="form-control" value="{{ $profile->last_name }}">
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label for="company">Compañía</label>
-                        <input id="company" type="text" class="form-control" value="">
-                      </div>
-                    </div>
+                    
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="street">Dirección</label>
-                        <input id="street" type="text" class="form-control"  value="<?= $direccion?>">
+                        <input id="street" type="text" class="form-control"  value="{{ $profile->adress}}">
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                      <div class="form-group">
-                        <label for="city">Calle</label>
-                        <input id="city" type="text" class="form-control">
-                      </div>
-                    </div>
+                    
                     <div class="col-md-6 col-lg-3">
                       <div class="form-group">
                         <label for="zip">Código Postal</label>
-                        <input id="zip" type="text" class="form-control">
+                        <input id="zip" type="text" class="form-control" value="{{ $profile->postcode }}">
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                       <div class="form-group">
                         <label for="state">Provincia</label>
-                        <select id="state" class="form-control"></select>
+                        <select id="state" class="form-control" value="{{ $profile->province }}"></select>
                       </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
                       <div class="form-group">
                         <label for="country">País</label>
-                        <select id="country" class="form-control"></select>
+                        <select id="country" class="form-control" value="{{ $profile->country }}"></select>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="phone">Teléfono</label>
-                        <input id="phone" type="text" class="form-control">
+                        <input id="phone" type="text" class="form-control" value="{{ $profile->telephone }}">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="email_account">Email</label>
-                        <input id="email_account" type="text" class="form-control">
+                        <input id="email_account" type="text" class="form-control" value="{{ $profile->email }}">
                       </div>
                     </div>
                     <div class="col-md-12 text-center">
@@ -140,6 +106,8 @@ if(!isset($_SESSION["usuario"])){
                 </form>
               </div>
             </div>
+
+            <!-- SIDEBAR -->
             <div class="col-lg-3 mt-4 mt-lg-0">
               <!-- CUSTOMER MENU -->
               <div class="panel panel-default sidebar-menu">
@@ -159,9 +127,4 @@ if(!isset($_SESSION["usuario"])){
           </div>
         </div>
       </div>
-
-        <?php require_once("inc/banner-footer.php") ?>
-        <?php require_once("inc/footer.php") ?>
-
-  </body>
-</html>
+@endsection 

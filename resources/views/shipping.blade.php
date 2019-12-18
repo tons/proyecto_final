@@ -1,9 +1,21 @@
 @extends('layouts.appbase')
 @section('content')
 
-@include('layouts.breadcrumbs')
-
-
+<div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row d-flex align-items-center flex-wrap">
+            <div class="col-md-7">
+                <h1 class="h2">Checkout - Método de Pago</h1>
+            </div>
+            <div class="col-md-5">
+                <ul class="breadcrumb d-flex justify-content-end">
+                    <li class="breadcrumb-item"><a href="-back-template/index-back.html">Home</a></li>
+                    <li class="breadcrumb-item active">Checkout - Método de Pago</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
   <div id="content">
     <div class="container">
@@ -12,10 +24,10 @@
           <div class="box">
             <form method="get" action="shop-checkout3.html">
               <ul class="nav nav-pills nav-fill">
-                <li class="nav-item"><a href="shop-checkout1.html" class="nav-link"> <i class="fa fa-map-marker"></i><br>Address</a></li>
-                <li class="nav-item"><a href="shop-checkout2.html" class="nav-link active"><i class="fa fa-truck"></i><br>Delivery Method</a></li>
-                <li class="nav-item"><a href="#" class="nav-link disabled"><i class="fa fa-money"></i><br>Payment Method</a></li>
-                <li class="nav-item"><a href="#" class="nav-link disabled"><i class="fa fa-eye"></i><br>Order Review</a></li>
+                <li class="nav-item"><a href="shop-checkout1.html" class="nav-link"> <i class="fa fa-map-marker"></i><br>Dirección</a></li>
+                <li class="nav-item"><a href="shop-checkout2.html" class="nav-link active"><i class="fa fa-truck"></i><br>Método de envío</a></li>
+                <li class="nav-item"><a href="#" class="nav-link disabled"><i class="fa fa-money"></i><br>Método de pago</a></li>
+                <li class="nav-item"><a href="#" class="nav-link disabled"><i class="fa fa-eye"></i><br>Revisión de pedido</a></li>
               </ul>
               <div class="content">
                 <div class="row">
@@ -49,9 +61,9 @@
                 </div>
               </div>
               <div class="box-footer d-flex flex-wrap align-items-center justify-content-between">
-                <div class="left-col"><a href="shop-checkout1.html" class="btn btn-secondary mt-0"><i class="fa fa-chevron-left"></i>Back to addresses</a></div>
+                <div class="left-col"><a href="shop-checkout1.html" class="btn btn-secondary mt-0"><i class="fa fa-chevron-left"></i>Volver a Dirección</a></div>
                 <div class="right-col">
-                  <button type="submit" class="btn btn-template-main">Continue to Payment Method<i class="fa fa-chevron-right"></i></button>
+                  <button type="submit" class="btn btn-template-main">Continuar al Método de Pago<i class="fa fa-chevron-right"></i></button>
                 </div>
               </div>
             </form>

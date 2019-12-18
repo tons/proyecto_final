@@ -112,6 +112,9 @@ Route::delete('/cms/users/delete/{id}', 'UserModelController@delete')->name('cms
 Route::get('/product', function (){
     return view('/product');
 });
+Route::get('/about', function (){
+    return view('/about');
+});
 
 Route::get('/shopdetail', function (){
     return view('/shopdetail');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BrandModelController extends Controller
 {
-    // Listar productosmarcas
+    // Listar marcas
         public function list() {
         $list = BrandModel::orderby('id')->get();
         dd($list);

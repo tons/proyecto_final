@@ -53,6 +53,7 @@
                                 <div class="col-md-5 text-right">
                                     <h1>DISEÑOS</h1>
                                     <ul class="list-unstyled">
+                                        <li>Modelos de los mejóres diseñadores</li>
                                         <li>Formal y Elegante</li>
                                         <li>Canchero y de Fiesta</li>
                                         <li>Casual para Todos los Días</li>
@@ -70,6 +71,7 @@
                                 <div class="col-md-5">
                                     <h1>FACIL DE COMPRAR</h1>
                                     <ul class="list-unstyled">
+                                        <li>Ingresá desde cualquier lugar y en el dispositivo que quieras</li>
                                         <li>Elegí tus prendas y calculá tu talle</li>
                                         <li>Llená tu carrito y recibilo en Tu Casa</li>
                                     </ul>

@@ -75,19 +75,37 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="" method="get">
+                        <form method="POST" action="{{ route('login') }}">
                             <div class="form-group">
-                                <input id="email_modal" type="text" placeholder="email" class="form-control">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group">
-                                <input id="password_modal" type="password" placeholder="password" class="form-control">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <p class="text-center">
-                                <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i>Registrarse</button>
+                                <button type="submit" class="btn btn-template-outlined">
+                                    <i class="fa fa-sign-in"></i>{{ __('Login') }}
+                                </button>
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
                             </p>
                         </form>
                         <p class="text-center text-muted">¿No se registro aun?</p>
-                        <p class="text-center text-muted"><a href="customer-register.html"><strong>Registrese ahora</strong></a> ¡Es fácil! Lo podes hacer en 1 minuto y tenes acceso descuentos increibles!</p>
+                        <p class="text-center text-muted"><a href="{{ route('register') }}"><strong>Registrese ahora</strong></a> ¡Es fácil! Lo podes hacer en 1 minuto y tenes acceso descuentos increibles!</p>
                     </div>
                 </div>
             </div>
@@ -421,19 +439,19 @@
                         <h4 class="h6">Novedades Moda</h4>
                         <ul class="list-unstyled footer-blog-list">
                             <li class="d-flex align-items-center">
-                                
+
                                 <div class="text">
                                     <h5 class="mb-0"> <a href="post.html">Nuestras Noticias</a></h5>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
-                                
+
                                 <div class="text">
                                     <h5 class="mb-0"> <a href="post.html">Trabajá con nosotros</a></h5>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
-                                
+
                                 <div class="text">
                                     <h5 class="mb-0"> <a href="post.html">Responsabilidad social</a></h5>
                                 </div>
@@ -451,7 +469,7 @@
                         <a href="contacto.php" class="btn btn-template-main">Contáctenos</a>
                         <hr class="d-block d-lg-none">
                     </div>
-                  
+
                 </div>
             </div>
             <div class="copyrights">

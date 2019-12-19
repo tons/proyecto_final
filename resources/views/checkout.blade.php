@@ -76,17 +76,33 @@
                                     </div>
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
-                                            <label for="state">Provincia</label>
-                                            <select id="state" class="form-control"></select>
+                                            <label for="province">Provincia</label>
+                                            <select id="province" class="form-control">
+                                            <script>
+window.addEventListener("load", function() {
+fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=nombre')
+  .then(function(response){
+    return response.json();
+})
+  .then(function(data){
+    var province = data.province;
+    var miSelect = document.getElementById('province');
+    for (var i = 0; i < province.length; i++){
+      miSelect.innerHTML += '<option>'+province[i].nombre+'</option>';
+    }
+  })
+})
+</script>
+                                            </select>
                                         </div>
+
                                     </div>
+                                    
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
                                             <label for="country" name="country">País</label>
                                             <select id="country" class="form-control">
-                                          @foreach(verPaises::all() as $country)
-                            <option value="{{ $country }}" {{ $flyers->country == $country ? "selected" : "" }}>{{ $country }}</option>
-                                           @endforeach
+                                          
                                             </select>
                                         </div>
                                     </div>

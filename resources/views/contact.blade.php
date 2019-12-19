@@ -103,7 +103,12 @@
                       </div>
                     </div>
                     <div class="col-sm-12 text-center">
-                      <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i> Enviar</button>
+                      <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"> Enviar</button>
+                      <script> 
+                      var mensaje = "Estás a punto de enviar una consulta";
+                      var resultado = confirm(mensaje);
+                      </script></i>
+
                     </div>
                   </div>
                 </form>
@@ -114,7 +119,7 @@
         <div id="map"></div>
       </div>
 
-
+      <
     </div>
     @endsection
 

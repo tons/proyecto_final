@@ -11,4 +11,9 @@ class ProvinceController extends Controller
         $data = Curl::to("https://infra.datos.gob.ar/catalog/modernizacion/dataset/7/distribution/7.2/download/provincias.json")->get();
         dd(json_decode($data, true));
     }
+    public function checkout(){
+        $province = Province::lists('name', 'id'){
+            return view('checkout', compact('province'));
+        }
+    }
 }

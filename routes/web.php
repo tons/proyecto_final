@@ -119,6 +119,7 @@ Route::get('/about', function (){
 Route::get('/shopdetail', function (){
     return view('/shopdetail');
 });
+Route::resource('province', 'ProvinceController');
 
 Route::get('/profile/{id?}', 'UserModelController@profile')->name('UserProfile');
 Route::post('/profile/{id?}', 'UserModelController@useredit')->name('UserProfile');

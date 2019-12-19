@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryModel extends Model 
+class CategoryModel extends Model
 {
 
     protected $table = 'categories';
@@ -14,7 +14,7 @@ class CategoryModel extends Model
 
     public function products()
     {
-        return $this->hasMany('ProductModel');
+        return $this->hasMany('App\ProductModel');
     }
 
 }

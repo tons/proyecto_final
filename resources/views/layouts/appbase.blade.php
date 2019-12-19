@@ -14,21 +14,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
 
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
     <!-- Bootstrap Select-->
-    <link rel="stylesheet" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-select/css/bootstrap-select.min.css') }}">
     <!-- owl carousel-->
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.red.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="{{ asset('plugins/owl.carousel/assets/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/owl.carousel/assets/owl.theme.default.css') }}">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
 
 </head>
 <body>
@@ -69,7 +66,7 @@
             <div role="document" class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 id="login-modalLabel" class="modal-title">Registro Cliente</h4>
+                        <h4 id="login-modalLabel" class="modal-title">{{ __('Login') }}</h4>
                         <button type="button" data-dismiss="modal" aria-label="Close" class="close">
                             <span aria-hidden="true">×</span>
                         </button>
@@ -116,15 +113,17 @@
         <header class="nav-holder make-sticky">
             <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a href="index.php" class="navbar-brand home">
-                        <img src="img/logo visteme.jpg" alt="Viste.me!" class="d-none d-md-inline-block">
-                        <img src="img/logo visteme.jpg" alt="Viste.me!" class="d-inline-block d-md-none">
-                        <span class="sr-only">Inicio</span>
+                    <a href="{{ route('home') }}" class="navbar-brand home">
+                        <img src="{{ asset("img/logo visteme.jpg") }}" alt="{{ config('app.name', 'Laravel') }}" class="d-none d-md-inline-block">
+                        <img src="{{ asset("img/logo visteme.jpg") }}" alt="{{ config('app.name', 'Laravel') }}" class="d-inline-block d-md-none">
+                        <span class="sr-only">{{ config('app.name', 'Laravel') }}</span>
                     </a>
-                    <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Cambiar navegación</span><i class="fa fa-align-justify"></i></button>
+                    <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined">
+                        <span class="sr-only">{{ __('Toggle navigation') }}</span><i class="fa fa-align-justify"></i>
+                    </button>
                     <div id="navigation" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
+                            <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">Inicio</a></li>
 
                             <!--<li class="nav-item dropdown active">
                                 <a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Home <b class="caret"></b></a>
@@ -142,11 +141,12 @@
                                     </li>
                                 </ul>
                             </li>-->
+
                             <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Mujer<b class="caret"></b></a>
                                 <ul class="dropdown-menu megamenu">
                                     <li>
                                         <div class="row">
-                                            <div class="col-lg-6"><img src="img/template-easy-customize.png" alt="" class="img-fluid d-none d-lg-block"></div>
+                                            {{--<div class="col-lg-6"><img src="img/template-easy-customize.png" alt="" class="img-fluid d-none d-lg-block"></div>--}}
                                             <div class="col-lg-3 col-md-6">
                                                 <h5>Pantallas</h5>
                                                 <ul class="list-unstyled mb-3">
@@ -242,7 +242,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item"><a href="contacto.php" class="nav-link">Contacto</a></li>
+                            <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Contacto</a></li>
 
                             <!-- ========== FULL WIDTH MEGAMENU ==================
                             <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="200" class="dropdown-toggle">All Pages <b class="caret"></b></a>
@@ -352,8 +352,10 @@
                     <div id="search" class="collapse clearfix">
                         <form role="search" class="navbar-form">
                             <div class="input-group">
-                                <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
-                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
+                                <input type="text" placeholder="Search" class="form-control">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+                                </span>
                             </div>
                         </form>
                     </div>
@@ -491,6 +493,28 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('plugins/bootstrap-select/js/bootstrap-select.min.js') }}" defer></script>
+    <script src="{{ asset('plugins/owl.carousel/owl.carousel.min.js') }}" defer></script>
+    <script src="{{ asset('plugins/jquery.scrollto/jquery.scrollTo.min.js') }}" defer></script>
+
+
+    <!-- Javascript files-->
+    {{--<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/waypoints/lib/jquery.waypoints.min.js"> </script>
+    <script src="vendor/jquery.counterup/jquery.counterup.min.js"> </script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>--}}
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/gmaps.init.js"></script>
+
 
 </body>
 </html>

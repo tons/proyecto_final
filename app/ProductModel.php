@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProductModel extends Model 
+class ProductModel extends Model
 {
 
     protected $table = 'products';
@@ -22,9 +22,9 @@ class ProductModel extends Model
         return $this->hasMany('OrderDetailsModel');
     }
 
-    public function Categoryof()
+    public function category()
     {
-        return $this->belongsTo('CategoryModel');
+        return $this->belongsTo('App\CategoryModel');
     }
 
 }

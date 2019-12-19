@@ -19,7 +19,6 @@ Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 
-
 /** FRONT  ///////////////////////////////////////////////////////////////////////////////////////// */
 
 Route::get('/profile/{id?}', 'UserModelController@profile')->name('UserProfile');

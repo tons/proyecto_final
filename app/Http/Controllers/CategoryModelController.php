@@ -2,21 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\CategoryModel;
 use Illuminate\Http\Request;
+use App\CategoryModel;
+use App\ProductModel;
+
 
 class CategoryModelController extends Controller {
 
     /** FRONT END */
     /* Listar productos de Categoria */
-    public function show(Category $category) {
+    public function show($id = null) {
 
-        $category->setRelation('products', $category->products()->paginate(10));
-        return $this->showOnePaginate($category, 10);
+        $list = [];
+        $list['products'] = ProductModel::orderby('name')->where('category_id', $id)->get();
+
+        dd($list);
+
+        return view('category', $list);
+
+        /*$category->setRelation('products', $category->products()->paginate(10));
+        return $this->showOnePaginate($category, 10);*/
 
     }
-
-
 
     /** BACK END */
     // Listar categories

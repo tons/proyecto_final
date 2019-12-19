@@ -95,8 +95,7 @@
                 </div>
               </div>
 
-              <div class="row">
-                              </div>
+              <div class="row"></div>
 
               <div class="pages">
                 <p class="loadMore text-center"><a href="#" class="btn btn-template-outlined"><i class="fa fa-chevron-down"></i> Cargar más</a></p>

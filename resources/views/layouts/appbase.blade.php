@@ -45,8 +45,35 @@
                                 <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
                             </ul>
                             <div class="login">
-                                <a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">Ingresar</span></a>
-                                <a href="registro.php" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">Registrarme</span></a>
+
+                                @guest
+                                     <a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">Ingresar</span></a>
+                                    @if (Route::has('register'))
+                                        <a class="signup-btn" href="{{ route('register') }}"><i class="fa fa-user"></i><span class="d-none d-md-inline-block"> {{ __('Register') }}</span></a>
+                                    @endif
+                                @else
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name }} <span class="caret"></span>
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                @endguest
+
+
                             </div>
                             <ul class="social-custom list-inline">
                                 <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -364,7 +391,7 @@
         </header>
         <!-- Navbar End-->
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        {{--<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -413,7 +440,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav>--}}
 
         <main class="py-4">
           @yield('content')
@@ -422,6 +449,7 @@
         <footer class="main-footer">
             <div class="container">
                 <div class="row">
+
                     <div class="col-lg-3">
                         <h4 class="h6">Sobre Nosotros</h4>
                         <p>Estamos desarrollando nuestras aptitudes y conocimientos sobre programación web</p>
@@ -437,6 +465,7 @@
                         </form>
                         <hr class="d-block d-lg-none">
                     </div>
+
                     <div class="col-lg-3">
                         <h4 class="h6">Novedades Moda</h4>
                         <ul class="list-unstyled footer-blog-list">
@@ -461,6 +490,7 @@
                         </ul>
                         <hr class="d-block d-lg-none">
                     </div>
+
                     <div class="col-lg-3">
                         <h4 class="h6">Contacto</h4>
                         <p class="text-uppercase">
@@ -511,9 +541,9 @@
     <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script src="vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>--}}
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    {{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
     <script src="js/gmaps.js"></script>
-    <script src="js/gmaps.init.js"></script>
+    <script src="js/gmaps.init.js"></script>--}}
 
 
 </body>

@@ -11,11 +11,10 @@ class ProductModelController extends Controller {
 
 
     // Mostrar producto
-    public function show($id) {
+    public function show($id = null) {
         $product = ProductModel::find($id);
         return view('product', $product);
     }
-
 
 
     // Listar productos
@@ -54,13 +53,13 @@ class ProductModelController extends Controller {
         }
     }
 
-}
-public function getAddToCart (Request $request, $id) {
-    $product = Product::find($id);
-    $oldCart = Session::has('cart') ? Session::get('cart') : null;
-    $cart = new Cart($oldCart);
-    $cart->add($product, $product->id);
+    public function getAddToCart(Request $request, $id) {
+        $product = Product::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->id);
 
-    $request->session()->put('cart', $cart);
-    return redirect()->route('/product');
+        $request->session()->put('cart', $cart);
+        return redirect()->route('/product');
+    }
 }

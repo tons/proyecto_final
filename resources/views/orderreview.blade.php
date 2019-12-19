@@ -127,6 +127,6 @@
         </div>
       </div>
 
+      @include('layouts.calltoaction')
 @endsection
 
-@include('layouts.calltoaction')

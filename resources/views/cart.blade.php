@@ -2,6 +2,10 @@
 
 @section('content')
   <div id="content">
+  <div class="row d-flex align-items-center flex-wrap">
+            <div class="col-md-7">
+                <h1 class="h2">CARRITO DE COMPRAS</h1>
+            </div>
         <div class="container">
           <div class="row bar">
             <div class="col-lg-12">
@@ -64,28 +68,28 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                   <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product2.jpg" alt="" class="img-fluid image1"></a></div>
+                    <div class="image"><a href="shop-detail.html"><img src="img/product6.jpg" alt="" class="img-fluid image1"></a></div>
                     <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Fur coat</a></h3>
-                      <p class="price">$143</p>
+                      <h3 class="h5"><a href="shop-detail.html">Blusa Tenerife</a></h3>
+                      <p class="price">$154.00</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                   <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product3.jpg" alt="" class="img-fluid image1"></a></div>
+                    <div class="image"><a href="shop-detail.html"><img src="img/product7.jpg" alt="" class="img-fluid image1"></a></div>
                     <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Abrigo de Piel</a></h3>
-                      <p class="price">$143</p>
+                      <h3 class="h5"><a href="shop-detail.html">Camisa Lisboa</a></h3>
+                      <p class="price">$122.00</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                   <div class="product">
-                    <div class="image"><a href="shop-detail.html"><img src="img/product1.jpg" alt="" class="img-fluid image1"></a></div>
+                    <div class="image"><a href="shop-detail.html"><img src="img/product8.jpg" alt="" class="img-fluid image1"></a></div>
                     <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Fur coat</a></h3>
-                      <p class="price">$143</p>
+                      <h3 class="h5"><a href="shop-detail.html">Camisola Amsterdam</a></h3>
+                      <p class="price">$153.00</p>
                     </div>
                   </div>
                 </div>
@@ -121,18 +125,7 @@
                   </table>
                 </div>
               </div>
-              <div class="box box mt-0 mb-4 p-0">
-                <div class="box-header mt-0">
-                  <h4>Código de DescuentoCoupon code</h4>
-                </div>
-                <p class="text-muted">Si tiene un código de descuento, ingréselo en el cuadro a continuación.</p>
-                <form>
-                  <div class="input-group">
-                    <input type="text" class="form-control"><span class="input-group-btn">
-                      <button type="button" class="btn btn-template-main"><i class="fa fa-gift"></i></button></span>
-                  </div>
-                </form>
-              </div>
+              
             </div>
           </div>
         </div>

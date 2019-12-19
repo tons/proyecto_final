@@ -116,3 +116,22 @@ Route::get('/cms/users/create_update/{id?}', 'UserModelController@createOrEdit')
 Route::post('/cms/users/create_update/{id?}', 'UserModelController@storeOrUpdate')->name('cms.users.createOrUpdate');
 // Eliminación
 Route::delete('/cms/users/delete/{id}', 'UserModelController@delete')->name('cms.users.delete');
+
+Route::get('/product', function (){
+    return view('/product');
+});
+Route::get('/about', function (){
+    return view('/about');
+});
+
+Route::get('/shopdetail', function (){
+    return view('/shopdetail');
+});
+Route::resource('province', 'ProvinceController');
+
+Route::get('/profile/{id?}', 'UserModelController@profile')->name('UserProfile');
+Route::post('/profile/{id?}', 'UserModelController@useredit')->name('UserProfile');
+Route::get('/add-to-cart/{id}', [
+    'uses'=> 'ProductModelController@getAddToCart',
+    'as'=> 'product.addToCart'
+]);

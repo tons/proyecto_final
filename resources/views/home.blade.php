@@ -24,8 +24,8 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-5 text-right">
-                                    <p><img src="img/logo.png" alt="" class="ml-auto"></p>
-                                    <h1>Multipurpose responsive theme</h1>
+                                   
+                                    <h1>INDUMENTARIA A LA MODA PARA TODA LA FAMILIA</h1>
                                     <p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>
                                 </div>
                                 <div class="col-md-7"><img src="img/template-homepage.png" alt="" class="img-fluid">

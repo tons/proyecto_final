@@ -1,0 +1,26 @@
+jQuery(function() {
+var marcaPuma = jQuery('.search-result .breadcrumb-cont .bread-crumb ul li.last').text().toLowerCase();
+jQuery('.search-result .box-grid-banner-y-slider').addClass('bannerCategory-' + marcaPuma);
+jQuery('.search-result .bannerCategory-puma').remove('.category-img-cont');
+jQuery('.search-result .bannerCategory-puma .grid-banner.container:first-child').html('<div class=" category-img-cont " style="visibility:visible !important;"><a style="width: 100%;height: 100%;display: block;" href="/220?PS=48&map=productClusterIds&O=OrderByReleaseDateDESC"><img src="/arquivos/rebaja_puma_incli_grilla.jpg" /></a></div>');
+
+});
+
+
+jQuery(function() {
+var marcaAdidas = jQuery('.search-result .breadcrumb-cont .bread-crumb ul li.last').text().toLowerCase();
+jQuery('.search-result .box-grid-banner-y-slider').addClass('bannerCategory-' + marcaAdidas);
+jQuery('.search-result .bannerCategory-adidas').remove('.category-img-cont');
+jQuery('.search-result .bannerCategory-adidas .grid-banner.container:first-child').html('<div class=" category-img-cont " style="visibility:visible !important;"><a style="width: 100%;height: 100%;display: block;" href="/adidas/143?O=OrderByReleaseDateDESC&PS=48&map=c,c,b,productClusterIds"><img src="/arquivos/rebaja_adidas_grilla.jpg" /></a></div>');
+
+});
+
+/*
+jQuery(function() {
+var marcaNike = jQuery('.search-result .breadcrumb-cont .bread-crumb ul li.last').text().toLowerCase();
+jQuery('.search-result .box-grid-banner-y-slider').addClass('bannerCategory-' + marcaNike);
+jQuery('.search-result .bannerCategory-nike').remove('.category-img-cont');
+jQuery('.search-result .bannerCategory-nike .grid-banner.container:first-child').html('<div class=" category-img-cont " style="visibility:visible !important;"><a style="width: 100%;height: 100%;display: block;" href="/calzados/zapatillas/nike/pegasus%2034?PS=12&O=OrderByPriceDESC"><img src="/arquivos/pegasus_34_grilla.jpg" /></a></div>'); 
+
+}); 
+*/ 

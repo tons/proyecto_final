@@ -1,0 +1,275 @@
+@charset "utf-8";
+/* CSS Document */
+/* Actualización 17/10
+- Promesas de servicios mobile.
+ */
+
+.icon-footer-caret-up{
+    height: 19px !important;
+}
+
+.icon-footer-caret-right {
+    margin-top: -3px;
+}
+
+.lottoBTS {
+    background-image: url(etiqueta_lotto_sc.jpg) !important;
+    display: inline-block !important;
+    left: 50px !important;
+    position: relative !important;
+    width: 105px;
+}
+
+.btn-border {
+    background-color: #ed3000 !important;
+    border-color: #ed3000 !important;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#mercadolibre_pie{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/mercado_pago_footer4.png);
+    background-repeat:no-repeat;
+}
+
+.promo {
+    background-color: #666 !important;
+    visibility: visible !important;
+}
+
+.resultado-busca-filtro .orderBy [value^="OrderByBestDiscount"] {
+    visibility: visible !important;
+}
+
+.icon-footer-logo-mastercard{
+    background-position: -385px -97px !important;
+    height: 29px !important;
+}
+
+.brand.kappa,.icon-brand-kappa{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/kappa.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.adidas-neo,.icon-brand-adidas-neo{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/adidas-neo.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.penalty,.icon-brand-penalty{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/penalty.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.lecoq,.icon-brand-lecoq{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/le-coq-min.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.le-coq,.icon-brand-le-coq{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/le-coq-min.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.umbro,.icon-brand-umbro{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/umbro-min.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.grenade,.icon-brand-grenade{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/sprite-marcas-grenade2.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.reves,.icon-brand-reves{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/reves-min.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.fila,.icon-brand-fila{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/fila-min.png);
+    height:23px;
+    width:40px;
+}
+
+.brand.gilbert,.icon-brand-gilbert{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/img_news_dex_marca_gilbert.jpg);
+    width:40px;
+    height:23px;
+}
+
+.icon-brand-grenade2 {
+    background-image: url(http://dexter.vteximg.com.br/arquivos/sprite-marcas-grenade2.png);
+    background-position: center;
+    height: 23px;
+    width: 40px;
+}
+
+.brand.jordan,.icon-brand-jordan{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/nike-jordan.jpg);
+    height:23px;
+    width:40px;
+}
+
+.brand.sb,.icon-brand-sb{
+    background-image:url(http://dexter.vteximg.com.br/arquivos/nike-sb.png);
+    height:23px;
+    width:40px;
+}
+
+.flag.nuevo, .data-product-box .economia-de .nuevo.economia .promo {
+    display: inline-block !important;
+}
+
+p.flag.mas_compras_mas_ahorras {
+    background-image: url(http://dexter.vteximg.com.br/arquivos/etiqueta_mascmopras_masahorras.png);
+    color: rgba(0, 0, 0, 0.0) !important;
+    height: 0px !important;
+    visibility: hidden;
+    width: 0px !important;
+}
+
+.amount-products.nuevo, .flag.nuevo, .data-product-box .economia-de .nuevo.economia .promo {
+    height: 18px !important;
+    visibility: visible !important;
+    width: 50px !important;
+}
+
+.icon-vtex-signature {
+    background-image: url(http://dexter.vteximg.com.br/arquivos/vtex_logo_magenta.jpg) !important;
+    background-position: 0 !important;
+    height: 29px !important;
+    width: 91px !important;
+}
+
+.amount-products.liquidacion::after, .flag.liquidacion::after, .data-product-box .economia-de .liquidacion.economia::after {
+    border-top-color: none !important;
+}
+
+p.preco-a-vista.price-cash {
+    position: fixed !important;
+    visibility: hidden !important;
+}
+
+em.valor-por.price-best-price {
+    color: black !important;
+    font-size: 0px !important;
+}
+
+em.valor-dividido.price-installments {
+    color: black !important;
+    font-size: 0px !important;
+}
+
+label.skuBestInstallmentValue {
+    visibility: visible !important !important;
+    color: white !important;
+    font-size: 12px !important;
+}
+
+div#modal-envio-gratis {
+    z-index: 110000 !important;
+}
+
+p.flag.lotto-kids {
+    background-image: url(http://dexter.vteximg.com.br/arquivos/promo_lotto_etiqueta_kids.png) !important;
+    color: rgba(0, 0, 0, 0.0) !important;
+    height: 0px !important;
+    visibility: hidden;
+    width: 0px !important;
+}
+
+@media (max-width: 980px){
+    .box-promesas {
+        margin: 0px !important;
+        position: relative !important;
+    }
+    .box-promesas {
+        background-color: #000 !important;
+    }
+}
+@media (max-width: 600px) {
+    .amount-products.nuevo, .flag.nuevo, .data-product-box .economia-de .nuevo.economia .promo {
+        width: 50px !important;
+        height: 18px !important;
+    }
+    .vitrine .prateleira .promocion {
+        background-position-y: center;
+        background-size: contain;
+        margin-top: 7px !important;
+        /* esto hace q se ajuste el tamaño del flag y el background lo acompañe */
+        width: 65%;
+    }
+    .vitrine .prateleira .Promocion {
+        background-position-y: center;
+        margin-top: 7px !important;
+        background-size: contain;
+        /* esto hace q se ajuste el tamaño del flag y el background lo acompañe */
+        width: 65%;
+    }
+
+    .vitrine .prateleira .nb25off {
+        background-position-y: center;
+        background-size: contain;
+        margin-top: 7px !important;
+        /* esto hace q se ajuste el tamaño del flag y el background lo acompañe */
+        width: 65%;
+    }
+
+    .footer-signatures{
+        height:170px !important;
+    }
+}
+
+/*RESPONSIVE FILES*/
+@media only screen and (max-width: 950px){
+    .footer-signatures{
+        height:220px !important;
+    }
+}
+@media only screen and (max-width: 768px){
+    #gradientbg_hommuj{
+        background: rgba(71,234,218,1);
+        background: -moz-linear-gradient(top, rgba(71,234,218,1) 0%, rgba(31,130,237,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,234,218,1)), color-stop(100%, rgba(31,130,237,1)));
+        background: -webkit-linear-gradient(top, rgba(71,234,218,1) 0%, rgba(31,130,237,1) 100%);
+        background: -o-linear-gradient(top, rgba(71,234,218,1) 0%, rgba(31,130,237,1) 100%);
+        background: -ms-linear-gradient(top, rgba(71,234,218,1) 0%, rgba(31,130,237,1) 100%);
+        background: linear-gradient(to bottom, rgba(71,234,218,1) 0%, rgba(31,130,237,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47eada', endColorstr='#1f82ed', GradientType=0 );
+    }
+    #gradientbg_ninio{
+        background: rgba(31,130,237,1);
+        background: -moz-linear-gradient(left, rgba(31,130,237,1) 0%, rgba(71,234,218,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(31,130,237,1)), color-stop(100%, rgba(71,234,218,1)));
+        background: -webkit-linear-gradient(left, rgba(31,130,237,1) 0%, rgba(71,234,218,1) 100%);
+        background: -o-linear-gradient(left, rgba(31,130,237,1) 0%, rgba(71,234,218,1) 100%);
+        background: -ms-linear-gradient(left, rgba(31,130,237,1) 0%, rgba(71,234,218,1) 100%);
+        background: linear-gradient(to right, rgba(31,130,237,1) 0%, rgba(71,234,218,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f82ed', endColorstr='#47eada', GradientType=1 );
+    }
+}
+@media (min-width: 769px){
+    .box-grid-banner-y-slider .container {
+        display: flex;
+        height: auto !important;
+        width: 50%;
+    }
+
+    .grid-banner .category-img-cont img {
+        display: block !important;
+        display: table;
+    }
+}
+
+.icon-footer-logo-mastercard {
+    background-position: -384px -96px !important;
+    height: 29px !important;
+}

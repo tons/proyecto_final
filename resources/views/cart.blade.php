@@ -14,17 +14,17 @@
                     <table class="table">
                       <thead>
                         <tr>
-                          <th colspan="2">Product</th>
-                          <th>Quantity</th>
-                          <th>Unit price</th>
-                          <th>Discount</th>
+                          <th colspan="2">Producto</th>
+                          <th>Cantidad</th>
+                          <th>Precio Unitario</th>
+                          <th>Descuento</th>
                           <th colspan="2">Total</th>
                         </tr>
                       </thead>
                       <tbody>
 
 
-                            @foreach ($cart as $item)
+                            {{--@foreach ($cart as $item)
                             <tr>
                                     <td><a href="#"><img src="img/detailsquare.jpg" alt="White Blouse Armani" class="img-fluid"></a></td>
                                     <td><a href="#">White Blouse Armani</a></td>
@@ -37,7 +37,7 @@
                                     <td><a href="#"><i class="fa fa-trash-o"></i></a></td>
                                   </tr>
 
-                            @endforeach
+                            @endforeach--}}
                       </tbody>
                       <tfoot>
                         <tr>
@@ -48,10 +48,10 @@
                     </table>
                   </div>
                   <div class="box-footer d-flex justify-content-between align-items-center">
-                    <div class="left-col"><a href="shop-category.html" class="btn btn-secondary mt-0"><i class="fa fa-chevron-left"></i> Continue shopping</a></div>
+                    <div class="left-col"><a href="shop-category.html" class="btn btn-secondary mt-0"><i class="fa fa-chevron-left"></i> Continúe la compra</a></div>
                     <div class="right-col">
-                      <button class="btn btn-secondary"><i class="fa fa-refresh"></i> Update cart</button>
-                      <button type="submit" class="btn btn-template-outlined">Proceed to checkout <i class="fa fa-chevron-right"></i></button>
+                      <button class="btn btn-secondary"><i class="fa fa-refresh"></i> Actualizar Carrito</button>
+                      <button type="submit" class="btn btn-template-outlined">Proceder al checkout <i class="fa fa-chevron-right"></i></button>
                     </div>
                   </div>
                 </form>
@@ -59,7 +59,7 @@
               <div class="row">
                 <div class="col-lg-3 col-md-6">
                   <div class="box text-uppercase mt-0 mb-2">
-                    <h3>You may also like these products</h3>
+                    <h3>También te pueden gustar estos productos</h3>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -75,7 +75,7 @@
                   <div class="product">
                     <div class="image"><a href="shop-detail.html"><img src="img/product3.jpg" alt="" class="img-fluid image1"></a></div>
                     <div class="text">
-                      <h3 class="h5"><a href="shop-detail.html">Fur coat</a></h3>
+                      <h3 class="h5"><a href="shop-detail.html">Abrigo de Piel</a></h3>
                       <p class="price">$143</p>
                     </div>
                   </div>
@@ -94,22 +94,23 @@
             <div class="col-lg-3">
               <div id="order-summary" class="box mt-0 mb-4 p-0">
                 <div class="box-header mt-0">
-                  <h3>Order summary</h3>
+                  <h3>Resumen de Pedido</h3>
                 </div>
-                <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+                <p class="text-muted">
+                    Los costos de envío y adicionales se calculan en función de los valores ingresados.</p>
                 <div class="table-responsive">
                   <table class="table">
                     <tbody>
                       <tr>
-                        <td>Order subtotal</td>
+                        <td>Subtotal de Pedido</td>
                         <th>$446.00</th>
                       </tr>
                       <tr>
-                        <td>Shipping and handling</td>
+                        <td>Preparación y Envío</td>
                         <th>$10.00</th>
                       </tr>
                       <tr>
-                        <td>Tax</td>
+                        <td>Impuestos</td>
                         <th>$0.00</th>
                       </tr>
                       <tr class="total">
@@ -122,9 +123,9 @@
               </div>
               <div class="box box mt-0 mb-4 p-0">
                 <div class="box-header mt-0">
-                  <h4>Coupon code</h4>
+                  <h4>Código de DescuentoCoupon code</h4>
                 </div>
-                <p class="text-muted">If you have a coupon code, please enter it in the box below.</p>
+                <p class="text-muted">Si tiene un código de descuento, ingréselo en el cuadro a continuación.</p>
                 <form>
                   <div class="input-group">
                     <input type="text" class="form-control"><span class="input-group-btn">

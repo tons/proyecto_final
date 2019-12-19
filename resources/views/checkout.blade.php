@@ -82,8 +82,12 @@
                                     </div>
                                     <div class="col-sm-6 col-md-3">
                                         <div class="form-group">
-                                            <label for="country">País</label>
-                                            <select id="country" class="form-control"></select>
+                                            <label for="country" name="country">País</label>
+                                            <select id="country" class="form-control">
+                                          @foreach(verPaises::all() as $country)
+                            <option value="{{ $country }}" {{ $flyers->country == $country ? "selected" : "" }}>{{ $country }}</option>
+                                           @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">

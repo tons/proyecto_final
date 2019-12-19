@@ -50,9 +50,10 @@
                           <option value="x-large">XL</option>
                         </select>
                       </div>
-                      <p class="price">$156.00</p>
+                      <p class="price">${{ $product-> price}}</p>
                       <p class="text-center">
-                        <button type="submit" class="btn btn-template-outlined"><i class="fa fa-shopping-cart"></i>Agregar al carrito</button>
+                      <>
+                        <a href="{{ route('product.addToCart', ['id'=> $product=> id)}}" class="btn btn-template-outlined" role="button">Agregar al carrito</a>
                         <button type="submit" data-toggle="tooltip" data-placement="top" title="Add to wishlist" class="btn btn-default"><i class="fa fa-heart-o"></i></button>
                       </p>
                     </form>

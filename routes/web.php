@@ -122,7 +122,10 @@ Route::get('/shopdetail', function (){
 
 Route::get('/profile/{id?}', 'UserModelController@profile')->name('UserProfile');
 Route::post('/profile/{id?}', 'UserModelController@useredit')->name('UserProfile');
-
+Route::get('/add-to-cart/{id}', [
+    'uses'=> 'ProductModelController@getAddToCart',
+    'as'=> 'product.addToCart'
+]);
 
 /*
 Route::get('/home', 'HomeController@index')->name('home');

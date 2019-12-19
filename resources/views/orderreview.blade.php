@@ -128,6 +128,6 @@
         </div>
       </div>
 
-  @include('layouts.calltoaction')    
+      @include('layouts.calltoaction')
 @endsection
 

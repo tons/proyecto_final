@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ShippingModel extends Model 
+class Shipping extends Model
 {
 
     protected $table = 'shipping';

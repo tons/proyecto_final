@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class OrderDetailsModel extends Model 
+class OrderDetails extends Model
 {
 
     protected $table = 'order_product';
@@ -14,12 +14,12 @@ class OrderDetailsModel extends Model
 
     public function orderdetailsof()
     {
-        return $this->belongsTo('OrderModel');
+        return $this->belongsTo('Order');
     }
 
-    public function orderdetailsof()
+    public function orderdetailsofProduct()
     {
-        return $this->belongsTo('ProductModel');
+        return $this->belongsTo('Product');
     }
 
 }

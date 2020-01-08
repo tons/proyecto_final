@@ -1,13 +1,13 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
 
-class UserModelController extends Controller 
-{
-  // Listar usuarios
+class UserController extends Controller {
+
+    // Listar usuarios
     public function list() {
         $list = User::orderby('id')->get();
         return view('cms.users', compact('list'));

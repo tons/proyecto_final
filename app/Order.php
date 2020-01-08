@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class OrderModel extends Model 
+class Order extends Model
 {
 
     protected $table = 'orders';
@@ -14,22 +14,24 @@ class OrderModel extends Model
 
     public function paymentof()
     {
-        return $this->belongsTo('PaymentModel');
+        return $this->belongsTo('Payment');
     }
 
     public function orderDetails()
     {
-        return $this->hasMany('OrderDetailsModel');
+        return $this->hasMany('OrderDetails');
     }
 
     public function customerof()
     {
-        return $this->belongsTo('CustomerModel');
+        return $this->belongsTo('Customer');
     }
 
+    /*
     public function orderDetails()
     {
-        return $this->belongsTo('ShippingModel');
+        return $this->belongsTo('Shipping');
     }
+    */
 
 }

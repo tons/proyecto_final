@@ -46,7 +46,7 @@
                                             <option value="x-large">XL</option>
                                         </select>
                                     </div>
-                                    <p class="price">$ {{ number_format($price, 0, ',', '.') }}</p>
+                                    <p class="price">$ {{ number_format(floatval($price), 0, ',', '.') }}</p>
                                     <p class="text-center">
                                         <button type="submit" class="btn btn-template-outlined">
                                             <i class="fa fa-shopping-cart"></i>Agregar al carrito
@@ -63,7 +63,7 @@
 
                     <div id="details" class="box mb-4 mt-4">
 
-                        {!! $description !!}
+                        {{ $description }}
 
                     </div>
 

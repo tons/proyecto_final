@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\BrandModel;
 use Illuminate\Http\Request;
 
-class BrandModelController extends Controller
+class BrandController extends Controller
 {
     // Listar marcas
         public function list() {

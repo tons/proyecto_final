@@ -3,23 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Product;
 use App\ProductModel;
 use Illuminate\Http\Request;
 use Session;
 
-class ProductModelController extends Controller {
+class ProductController extends Controller {
 
 
     // Mostrar producto
     public function show($id = null) {
-        $product = ProductModel::find($id);
-        return view('product', $product);
+
+        $product = Product::find($id);
+
+        if($product) {
+            return view('product', $product);
+        } else {
+            return abort(404);
+        }
+
+        // si el producto existe -->
+
+
+
+        // si no existe retornar a home / Pagina no existe == 404
+
     }
 
-
+    /** ABML */
     // Listar productos
     public function list() {
-        $list = ProductModel::orderby('id')->get();
+        $list = Product::orderby('id')->get();
         return view('cms.products', compact('list'));
     }
 
@@ -46,10 +60,12 @@ class ProductModelController extends Controller {
     }
 
 
+
+
     public function obtenerDesdeClasificacion($tipoEtiqueta) {
         if ($tipoEtiqueta == 'category') {
             $data['isCategpry'] = true;
-            $data['list'] = ProductModel::all();
+            $data['list'] = Product::all();
         }
     }
 
@@ -60,6 +76,7 @@ class ProductModelController extends Controller {
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        return redirect()->route('/product');
+        //return redirect()->route('/product/'.$id);
+        return redirect()->route('/product/'.$id);
     }
 }

@@ -7,7 +7,7 @@ use App\CategoryModel;
 use App\ProductModel;
 
 
-class CategoryModelController extends Controller {
+class CategoryController extends Controller {
 
     /** FRONT END */
     /* Listar productos de Categoria */

@@ -47,13 +47,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="company">Compañía</label>
-                                            <input id="company" type="text" class="form-control">
-                                        </div>
-                                    </div>
+                                
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="street">Calle</label>
@@ -78,21 +72,13 @@
                                         <div class="form-group">
                                             <label for="province">Provincia</label>
                                             <select id="province" class="form-control">
-                                            <script>
-window.addEventListener("load", function() {
-fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=nombre')
-  .then(function(response){
-    return response.json();
-})
-  .then(function(data){
-    var province = data.province;
-    var miSelect = document.getElementById('province');
-    for (var i = 0; i < province.length; i++){
-      miSelect.innerHTML += '<option>'+province[i].nombre+'</option>';
-    }
-  })
-})
-</script>
+                                            <option> Elije una provincia </option>
+                                            
+                                            @foreach ($province as $item){
+                                             <option>                                        
+                                            {{$item}} </option> 
+                                            }
+                                            @endforeach
                                             </select>
                                         </div>
 
@@ -102,7 +88,11 @@ fetch('https://apis.datos.gob.ar/georef/api/provincias?campos=nombre')
                                         <div class="form-group">
                                             <label for="country" name="country">País</label>
                                             <select id="country" class="form-control">
-                                          
+                                            <option> Elije un país </option>
+                                            @foreach ($country as $item){
+                                                <option> {{$item}} </option>
+                                            }
+                                            @endforeach                                                                               
                                             </select>
                                         </div>
                                     </div>

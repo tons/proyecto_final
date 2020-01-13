@@ -18,17 +18,19 @@ class ProductController extends Controller {
 
         if($product) {
             return view('product', $product);
-        } else {
-            return abort(404);
         }
+
+        if(!$product) {
+            return redirect () ->route('home', [$product]);
+    }
 
         // si el producto existe -->
 
-
-
-        // si no existe retornar a home / Pagina no existe == 404
-
+      
     }
+        
+   
+    
 
     /** ABML */
     // Listar productos

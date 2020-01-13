@@ -97,16 +97,19 @@
                                 <h3>Productos vistos recientemente</h3>
                             </div>
                         </div>
+                        @foreach ($recent as $item) {
                         <div class="col-lg-3 col-md-6">
                             <div class="product">
-                                <div class="image"><a href="#">
+                                <div class="image"><a href="{{route('product', $item->$id)">
                                         <img src="img/product9.jpg" alt="" class="img-fluid image1"></a></div>
                                 <div class="text">
-                                    <h3 class="h5"><a href="shop-detail.html">Blusa Canadá Blanca</a></h3>
-                                    <p class="price">$146.00</p>
+                                    <h3 class="h5"><a href="shop-detail.html">{{$item->name}}</a></h3>
+                                    <p class="price">$ {{$item->price}}</p>
                                 </div>
                             </div>
+                        }
                         </div>
+                        @endforeach
                         <div class="col-lg-3 col-md-6">
                             <div class="product">
                                 <div class="image">
@@ -114,7 +117,7 @@
                                 </div>
                                 <div class="text">
                                     <h3 class="h5"><a href="shop-detail.html">Blusa Tenerife Negra</a></h3>
-                                    <p class="price">$123.00</p>
+                                    <p class="price">$ {{$price}}</p>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +128,7 @@
                                 </div>
                                 <div class="text">
                                     <h3 class="h5"><a href="shop-detail.html">Blusa Alaska Blanca</a></h3>
-                                    <p class="price">$146.00</p>
+                                    <p class="price">$ {{$price}}</p>
                                 </div>
                             </div>
                         </div>

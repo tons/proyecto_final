@@ -53,7 +53,7 @@ Route::get('/shopdetail', function (){
     return view('/shopdetail');
 });
 
-Route::resource('province', 'ProvinceController');
+
 
 
 

@@ -3,8 +3,7 @@
 @section('content')
 
     <div id="all">
-
-            <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
+        <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
         <div class="container">
           <div class="row d-flex align-items-center flex-wrap">
             <div class="col-md-7">
@@ -38,7 +37,7 @@
                 <div class="box-simple">
                   <div class="icon-outlined"><i class="fa fa-map-marker"></i></div>
                   <h3 class="h4">Dirección</h3>
-                  <p>José Baigorrí 643<br>                                      Alta Córdoba, <br>                                        Córdoba,  <strong>Argentina</strong></p>
+                  <p>José Baigorrí 643<br>Alta Córdoba,<br>Córdoba, <strong>Argentina</strong></p>
                 </div>
               </div>
               <div class="col-md-4">
@@ -103,12 +102,7 @@
                       </div>
                     </div>
                     <div class="col-sm-12 text-center">
-                      <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"> Enviar</button>
-                      <script> 
-                      var mensaje = "Estás a punto de enviar una consulta";
-                      var resultado = confirm(mensaje);
-                      </script></i>
-
+                      <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i> Enviar</button>
                     </div>
                   </div>
                 </form>
@@ -117,8 +111,5 @@
           </section>
         </div>
       </div>
-
-      <
     </div>
     @endsection
-

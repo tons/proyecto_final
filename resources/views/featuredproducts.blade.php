@@ -4,6 +4,8 @@
             <p class="text-muted lead text-center">Los destacados de {{ $mes }}</p>
             <div class="products-big">
                 <div class="row products">
+
+
                     <div class="col-lg-3 col-md-4">
                         <div class="product">
                             <div class="image"><a href="shop-detail.html"><img src="img/product9.jpg" alt="" class="img-fluid image1"></a></div>
@@ -13,6 +15,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-3 col-md-4">
                         <div class="product">
                             <div class="image"><a href="shop-detail.html"><img src="img/product7.jpg" alt="" class="img-fluid image1"></a></div>
@@ -28,6 +31,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-3 col-md-4">
                         <div class="product">
                             <div class="image"><a href="shop-detail.html"><img src="img/product6.jpg" alt="" class="img-fluid image1"></a></div>

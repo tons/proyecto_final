@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row d-flex align-items-center flex-wrap">
                 <div class="col-md-7">
-                    <h1 class="h2">{{ $name }}</h1>
+                    <h1 class="h2">{{ $product->name }}</h1>
                 </div>
                 <div class="col-md-5">
                     <ul class="breadcrumb d-flex justify-content-end">
@@ -29,8 +29,8 @@
                     <div id="productMain" class="row">
                         <div class="col-sm-6">
                             <div data-slider-id="1" class="owl-carousel shop-detail-carousel">
-                                <div><img src="{{ asset("img/product10.jpg") }}" alt="" class="img-fluid"></div>
-                                <div><img src="{{ asset("img/product10a.jpg") }}" alt="" class="img-fluid"></div>
+                                <div><img src="{{ URL::asset("/img/". $product->image) }}" alt="" class="img-fluid"></div>
+                                {{--<div><img src="{{  URL::asset("/img/") }}" alt="" class="img-fluid"></div>--}}
                             </div>
                         </div>
 
@@ -46,7 +46,7 @@
                                             <option value="x-large">XL</option>
                                         </select>
                                     </div>
-                                    <p class="price">$ {{ number_format(floatval($price), 0, ',', '.') }}</p>
+                                    <p class="price">$ {{ number_format(floatval($product->price), 0, ',', '.') }}</p>
                                     <p class="text-center">
                                         <button type="submit" class="btn btn-template-outlined">
                                             <i class="fa fa-shopping-cart"></i>Agregar al carrito
@@ -63,7 +63,7 @@
 
                     <div id="details" class="box mb-4 mt-4">
 
-                        {{ $description }}
+                        {{ $product->description }}
 
                     </div>
 
@@ -97,6 +97,7 @@
                                 <h3>Productos vistos recientemente</h3>
                             </div>
                         </div>
+
                         <div class="col-lg-3 col-md-6">
                             <div class="product">
                                 <div class="image"><a href="#">
@@ -107,28 +108,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="product">
-                                <div class="image">
-                                    <a href="#"><img src="img/product7.jpg" alt="" class="img-fluid image1"></a>
-                                </div>
-                                <div class="text">
-                                    <h3 class="h5"><a href="shop-detail.html">Blusa Tenerife Negra</a></h3>
-                                    <p class="price">$123.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="product">
-                                <div class="image">
-                                    <a href="#"><img src="img/product6.jpg" alt="" class="img-fluid image1"></a>
-                                </div>
-                                <div class="text">
-                                    <h3 class="h5"><a href="shop-detail.html">Blusa Alaska Blanca</a></h3>
-                                    <p class="price">$146.00</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 

@@ -39,19 +39,11 @@ Route::get('/contact', function () { return view('contact'); })->name('contact')
 
 Route::get('/faq', function () { return view('faq'); });
 
-Route::get('/about', function (){ return view('/about'); });
+Route::get('/about', function (){ return view('about'); });
 
 
-Route::get('/product', function (){
-    return view('/product');
-});
-Route::get('/about', function (){
-    return view('/about');
-});
 
-Route::get('/shopdetail', function (){
-    return view('/shopdetail');
-});
+Route::get('/shopdetail', function (){ return view('shopdetail'); });
 
 Route::resource('province', 'ProvinceController');
 
@@ -65,6 +57,13 @@ Route::get('/add-to-cart/{id}', [
 
 
 /** CARRITO */
+
+
+Route::get('cart', 'ProductController@cart');
+
+Route::get('add-to-cart/{id}', 'ProductController@addToCart');
+
+
 Route::get('/cart', function () {
     return view('cart');
 });

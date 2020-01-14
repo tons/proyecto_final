@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Product;
-use App\ProductModel;
 use Illuminate\Http\Request;
 use Session;
 
@@ -14,21 +13,26 @@ class ProductController extends Controller {
     // Mostrar producto
     public function show($id = null) {
 
-        $product = Product::find($id);
+        $data = array();
+        $data['product'] = Product::find($id);
 
-        if($product) {
-            return view('product', $product);
+        if( !empty($data['product']) ) {
+            return view('product', $data);
         } else {
             return abort(404);
         }
 
-        // si el producto existe -->
+    }
 
-
-
-        // si no existe retornar a home / Pagina no existe == 404
+    public function cart()
+    {
+        return view('cart');
+    }
+    public function addToCart($id)
+    {
 
     }
+
 
     /** ABML */
     // Listar productos

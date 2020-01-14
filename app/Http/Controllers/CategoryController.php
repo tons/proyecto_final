@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\CategoryModel;
-use App\ProductModel;
+use App\Category;
+use App\Product;
 
 
 class CategoryController extends Controller {
@@ -14,9 +14,8 @@ class CategoryController extends Controller {
     public function show($id = null) {
 
         $list = [];
-        $list['products'] = ProductModel::orderby('name')->where('category_id', $id)->get();
-
-        dd($list);
+        $list['products'] = Product::orderby('name')->where('category_id', $id)->get();
+        $list['category'] = Category::find($list['products'][0]->category_id);
 
         return view('category', $list);
 

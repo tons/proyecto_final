@@ -46,6 +46,8 @@ class CategoryController extends Controller {
         return view('cms.categories.form', $data);
     }
 
+    
+
     // Almacenar
     public function storeOrUpdate($id = null, Request $request) {
         // First or new nos devuelve un registro existente para editar o una instancia nueva para crear

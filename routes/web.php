@@ -100,14 +100,15 @@ Route::get('/cms', function () {
 
 
 // PRODUCTOS
+Route::resource('products', 'ProductController');
 // Listado
-Route::get('/cms/products', 'ProductController@list')->name('cmsProductos');
+Route::get('/cms/products', 'ProductController@CmsProductList')->name('list.products');
 // Mostrar formulario de Creación / Edición
-Route::get('/cms/products/create_update/{id?}', 'ProductController@createOrEdit')->name('cms.products.createOrUpdate');
+Route::get('/cms/products/create/{id?}', 'ProductController@CmsProductCreate')->name('add.products');
 // Obtener datos enviados y Crear/Guardar
-Route::post('/cms/products/create_update/{id?}', 'ProductController@storeOrUpdate')->name('cms.products.createOrUpdate');
+Route::get('/cms/products/edit/{id?}', 'ProductController@CmsProductEdit')->name('edit.products');
 // Eliminación
-Route::delete('/cms/products/delete/{id}', 'ProductController@delete')->name('cms.products.delete');
+Route::delete('/cms/products/delete/{id}', 'ProductController@delete')->name('delete.products');
 
 // MARCAS
 // Listado
